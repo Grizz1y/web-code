@@ -1,0 +1,64 @@
+h1 {
+	text-align: center; /*Выравнивание текста по центру*/
+	color: blue; /*Задаем цвет тексту*/
+}
+header {
+	margin-top: : 200px; /*Задает отступ сверху*/
+}
+.dws-menu {
+	margin: 0; /*Задаем отступ по горизонтали*/
+	padding: 0; /*Задаем отступ по вертикали*/
+}
+.dws-menu  ul,
+.dws-menu ol {
+	list-style: none; /*Убираем маркеры у списка*/
+} 
+.dws-menu > ul {
+	display: flex;/*Делаем отображение "ul" списока горизонтальным*/
+	justify-content: center; /*Располагаем контент по центру*/
+}
+.dws-menu >ul li a {  /*Отбираем ссылки*/
+	display: block; /* делаем ссылки блочными элементами*/
+	background: #ececed; /*задаем цвет фона*/
+	padding: 30px 30px 30px 100px; /*Задаем отступы у элементов меню*/
+	font-size: 16px; /*Размер шрифта*/
+	color: #454547; /*задаем цвет текста*/
+	text-decoration: none; /*убираем подчеркивание*/ 
+	text-transform: uppercase; /*делаем пункты заглавными буквами*/
+}
+/*задаем бардюры у списка по бокам*/
+.dws-menu > ul li: first-child { 
+border-left: 1px solid #b2b3b5; /*задаем первому бардюру отступ и добавляем цвет*/
+}
+.dws-menu > ul li: last-child {
+	border-right: 1px solid #babbbb;  /*задаем второму бардюру отступ и добавляем цвет*/
+}
+/*отбираем ссылки при нведении*/
+.dws-menu ul li a:hover  { /*эффект изменение цвета при наведении*/ 
+	background: yellow; /*изменение цвета фона*/
+	color:#FFFFFF ; /*цвет текеста*/ 
+}
+
+
+/*sub menu*/
+.dws-menu li ul {
+	position: absolute;
+	min-width: 150px;
+	display: none;
+}
+.dws-menu li > ul li {
+border: 1px solid #c7c8ca;
+}
+.dws-menu li > ul li a {
+	padding: 20px;
+	text-transform: none;
+	background: #e4e4e5;
+}
+.dws-menu li > ul li ul {
+	position: absolute;
+	right: -150px;
+	top: 0;
+}
+.dws-menu li:hover > ul {
+	display: block;
+}
